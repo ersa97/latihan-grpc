@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/ersa97/latihan-grpc/server/chat";
+
+package chat;
+
+service HelloService {
+    rpc SayHello(SayRequest) returns (SayResponse){}
+}
+
+
+message SayRequest {
+    string word = 1;
+}
+
+message SayResponse {
+    string content = 1;
+}
